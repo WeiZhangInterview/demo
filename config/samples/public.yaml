@@ -1,0 +1,15 @@
+apiVersion: demo.demo.com/v1
+kind: NameClass
+metadata:
+  labels:
+    app.kubernetes.io/name: nameclass
+    app.kubernetes.io/instance: nameclass-sample
+    app.kubernetes.io/part-of: demo
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: demo
+  name: public-network
+spec:
+  replicas: 1
+  image: test-public-5
+  port: 3307
+  nodeport: 3308
